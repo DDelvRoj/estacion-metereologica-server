@@ -30,7 +30,7 @@ app.get('/api/forecast', async (req, res) => {
 });
 app.get('/api/saludar', async (req, res) => {
   try {
-    const data = {mensaje:'Hola'}
+    const data = {mensaje:'Hola como estas'}
     res.json(data);
   } catch (error) {
     res.status(500).json({ error: 'Error al enviar mensaje' });
