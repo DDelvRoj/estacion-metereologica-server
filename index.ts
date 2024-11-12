@@ -28,6 +28,14 @@ app.get('/api/forecast', async (req, res) => {
     res.status(500).json({ error: 'Error al obtener datos del pronóstico' });
   }
 });
+app.get('/api/saludar', async (req, res) => {
+  try {
+    const data = {mensaje:'Hola como estas'}
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ error: 'Error al enviar mensaje' });
+  }
+});
 
 const PORT = 3000;
 app.listen(PORT, () => {
